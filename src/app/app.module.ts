@@ -6,18 +6,21 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
-import { SearchHotelComponent } from './search-hotel/search-hotel.component';
 import { HotelsService } from './services/hotels.service';
 import { HotelItemListComponent } from './hotel-item-list/hotel-item-list.component';
 import { HttpModule } from '@angular/http';
+import { HotelInfoComponent } from './hotel-info/hotel-info.component';
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { CreateHotelComponent } from './create-hotel/create-hotel.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchHotelComponent,
-    HotelItemListComponent
+    HotelItemListComponent,
+    HotelInfoComponent,
+    CreateHotelComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { HttpModule } from '@angular/http';
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     FormsModule,
-     HttpModule,
+    HttpModule,
+    NgbModule.forRoot(),
   ],
   providers: [HotelsService],
   bootstrap: [AppComponent]

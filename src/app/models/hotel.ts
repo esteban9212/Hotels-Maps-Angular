@@ -1,21 +1,21 @@
+import { Comentario } from './comentario';
 export class Hotel {
 
-
+	id: string;	
 	nombre:string;
-	calificacionPromedio:string;
-	costoHabitacion:string;
-	ubicacion:string;
-	comentarios:string;
+	calificacionPromedio:number;
+	costoHabitacion:number;
+	latitud:number;
+	longitud:number;
+	comentarios:Comentario[];
 
 
-	constructor(nombre:string, calificacionPromedio:string,costoHabitacion:string,ubicacion:string,comentarios:string) {
+	constructor(nombre:string, calificacionPromedio:number,costoHabitacion:number,ubicacion:string,latitud:number,longitud:number,comentarios:Comentario[]) {
 		this.nombre=nombre;
 		this.calificacionPromedio=calificacionPromedio;
 		this.costoHabitacion=costoHabitacion;
-		this.ubicacion=ubicacion;
+		this.latitud=latitud;
+		this.longitud=longitud;
 		this.comentarios=comentarios;
 	}
-
-
-
 }
