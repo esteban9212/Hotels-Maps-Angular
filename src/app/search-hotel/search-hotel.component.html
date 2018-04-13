@@ -1,3 +1,41 @@
-<p>
-  search-hotel works!
-</p>
+
+<form class="form-signin" (ngSubmit)="addHotel()">
+	<h2 class="form-signin-heading">Guardar Hotel</h2>
+	<div class="form-group">
+		<label for="inputNombre">Nombre</label>
+		<input class="form-control" id="inputNombre" name="nombre" placeholder="Nombre Hotel" [(ngModel)]="hotel.nombre">
+	</div>
+
+
+	<div class="form-group">
+		<label for="inputCosto">Costo Habitacion</label>
+		<input class="form-control" id="inputCosto" name="costoHabitacion" placeholder="costoHabitacion Hotel" [(ngModel)]="hotel.costoHabitacion">
+	</div>
+
+	<div class="form-group">
+		<label for="inputUbicacion">Ubicación</label>
+		<input class="form-control" id="inputUbicacion" name="ubicacion" placeholder="ubicacion Hotel" [(ngModel)]="hotel.ubicacion">
+	</div>
+
+
+	<button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+<ul>
+	<li *ngFor="let hotel of hotels ">
+		{{ hotel.nombre }}
+	</li>
+</ul>
+<ngui-map 
+  zoom="13" 
+  center="37.775, -122.434" 
+
+  (mapClick)="onMapClick($event)"
+
+  mapTypeId="satellite">
+    <marker *ngFor="let pos of positions" 
+      [position]="pos"
+      (initialized$)="onMarkerInit($event)"></marker>
+</ngui-map>
+
+
