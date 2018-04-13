@@ -1,0 +1,41 @@
+.list-hotels{
+	padding-top: 30px;
+	text-decoration: none;
+}
+app-search-hotel {
+    text-align: center;
+
+}
+
+.flex {
+    display: flex;
+}
+
+.formulario{
+  border-radius: 5px;
+	width: max-content;
+	background-color: #fafafa;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  text-align: center;
+  display: inline-flex;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: initial;
+}
+
+li {
+	list-style:none;
+}
+
+
+.formulario {
+float:left;
+}
+
+list-hotels {
+float:left;
+
+}
+

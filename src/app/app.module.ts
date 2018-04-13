@@ -8,13 +8,16 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { SearchHotelComponent } from './search-hotel/search-hotel.component';
 import { HotelsService } from './services/hotels.service';
+import { HotelItemListComponent } from './hotel-item-list/hotel-item-list.component';
+import { HttpModule } from '@angular/http';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchHotelComponent
+    SearchHotelComponent,
+    HotelItemListComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +25,7 @@ import { HotelsService } from './services/hotels.service';
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     FormsModule,
+     HttpModule,
   ],
   providers: [HotelsService],
   bootstrap: [AppComponent]

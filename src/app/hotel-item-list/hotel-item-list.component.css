@@ -1,0 +1,43 @@
+.redondeado{
+	border-radius: 5px;
+	border: 1px;
+	background: #f3f6f8;
+	border-style: solid;
+	margin-bottom: 15px;
+	padding-left: 15px;
+	width: 450px;
+}
+
+
+
+span.o-hotel-review__score {
+    display: inline-block;
+    vertical-align: middle;
+    background: #2681FF;
+    border-radius: 14px;
+    font-family: arial, sans-serif;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #A8CCFF;
+    line-height: 1.3;
+}
+
+.o-price__num {
+    color: #f60;
+    font-size: 22px;
+    line-height: 1.1;
+    font-weight: bolder;
+}
+
+.o-price__currency {
+    color: #f60;
+    font-size: 14px;
+}
+
+.c-hot-hotel-item-v2__price-box {
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+    display: block;
+}
