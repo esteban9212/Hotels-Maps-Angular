@@ -19,7 +19,7 @@ app-search-hotel {
   padding: 1rem;
   border: 2px solid #ccc;
   text-align: center;
-  display: inline-flex;
+
   margin-top: 20px;
   margin-left: 20px;
   text-align: initial;
@@ -37,5 +37,13 @@ float:left;
 list-hotels {
 float:left;
 
+}
+
+.tabs__panel[_ngcontent-c3] {
+    background-color: #f3f6f8 !important;
+    width: 100%;
+    box-shadow: inset 0px 0px 0px 1px #c9c9c9;
+    border-radius: 6px;
+    padding: 30px 15px;
 }
 

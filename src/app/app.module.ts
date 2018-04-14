@@ -12,6 +12,8 @@ import { HttpModule } from '@angular/http';
 import { HotelInfoComponent } from './hotel-info/hotel-info.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CreateHotelComponent } from './create-hotel/create-hotel.component';
+import { TabModule } from 'angular-tabs-component';
+import { MainComponent } from './main/main.component';
 
 
 
@@ -20,7 +22,8 @@ import { CreateHotelComponent } from './create-hotel/create-hotel.component';
     AppComponent,
     HotelItemListComponent,
     HotelInfoComponent,
-    CreateHotelComponent
+    CreateHotelComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { CreateHotelComponent } from './create-hotel/create-hotel.component';
     FormsModule,
     HttpModule,
     NgbModule.forRoot(),
+    TabModule
   ],
   providers: [HotelsService],
   bootstrap: [AppComponent]
