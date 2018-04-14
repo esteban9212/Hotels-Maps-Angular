@@ -13,7 +13,6 @@ import { HotelInfoComponent } from './hotel-info/hotel-info.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CreateHotelComponent } from './create-hotel/create-hotel.component';
 import { TabModule } from 'angular-tabs-component';
-import { MainComponent } from './main/main.component';
 
 
 
@@ -23,7 +22,6 @@ import { MainComponent } from './main/main.component';
     HotelItemListComponent,
     HotelInfoComponent,
     CreateHotelComponent,
-    MainComponent
   ],
   imports: [
     BrowserModule,

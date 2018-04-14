@@ -1,12 +1,19 @@
 
+  
+<div class="jumbotron jumbotron-fluid fondo">
+  <div class="container">
+    <h1 class="display-3 blanco">Trivago 2.0</h1>
+    <p class="lead blanco">Encuentra el mejor hotel!!</p>
+  </div>
+</div>
   <div class="row">
   <div class="col-lg-3">
-    <div class="affix" style="position:fixed">
+    <div class="affix" >
 
 
       <tabs>
         <tab tabTitle="Guardar">
-         <div class="formulario">
+
 
            <form class="form-signin" (ngSubmit)="saveHotel()">
             <h2 class="form-signin-heading">Guardar Hotel</h2>
@@ -32,15 +39,9 @@
             </div>
             <button type="submit" class="btn btn-primary">Guardar</button>
           </form>
-
-
-
-        </div>
       </tab>
 
       <tab tabTitle="Buscar">
-
-        <div class="formulario">
 
           <form class="form-signin" (ngSubmit)="filter()">
             <h2 class="form-signin-heading">Buscar Hotel</h2>
@@ -51,7 +52,7 @@
 
             <button type="submit" class="btn btn-primary">Buscar</button>
           </form>
-        </div> 
+
 
 
       </tab>
