@@ -9,19 +9,19 @@ import { HotelsService } from '../services/hotels.service';
 })
 export class HotelInfoComponent implements OnInit {
   @Input() hotel: Hotel;
-  @Input() coment : Comentario;
+  @Input() coment: Comentario;
 
   //Hotel
-  latitude:number;
-  longitude:number;
+  latitude: number;
+  longitude: number;
   location;
 
-//Comentario
-  usuario:string;
-	email:string;
-	comentario:string;
-	calificacion:number;
-  comentarios:Comentario[];
+  //Comentario
+  usuario: string;
+  email: string;
+  comentario: string;
+  calificacion: number;
+  comentarios: Comentario[];
 
 
   constructor(public hotelService: HotelsService) { }
@@ -30,27 +30,39 @@ export class HotelInfoComponent implements OnInit {
     this.latitude = this.hotel.latitud;
     this.longitude = this.hotel.longitud;
     this.location = this.hotel.nombre;
-    this.comentarios=this.hotel.comentarios;
+    this.comentarios = this.hotel.comentarios;
   }
 
-  saveComent(){
+  saveComent() {
 
-if(this.comentario.length ){
+    if (this.comentario.length) {
       let comentario: Comentario = {
-        id: this.hotel.id+this.usuario+this.email,
+        id: this.hotel.id + this.usuario + this.email,
         usuario: this.usuario,
         email: this.email,
         comentario: this.comentario,
         calificacion: this.calificacion
       }
 
-
       this.hotel.comentarios.push(comentario);
       this.hotelService.updateHotel(this.hotel);
-      
-      this.usuario= '';
-      this.email= '';
-      this.comentario= '';
+
+      let total: number = 0;
+      let size = this.hotel.comentarios.length;
+      for (let i: number = 0; i < size; i++) {
+
+        let cal = this.hotel.comentarios[i].calificacion;
+        console.log(cal);
+        console.log(total);
+        total += cal;
+      }
+      this.hotel.calificacionPromedio = total / size;
+
+      this.hotelService.updateHotel(this.hotel);
+
+      this.usuario = '';
+      this.email = '';
+      this.comentario = '';
       this.calificacion = -1;
 
     }
@@ -58,6 +70,6 @@ if(this.comentario.length ){
 
 
   }
-  
+
 
 }
