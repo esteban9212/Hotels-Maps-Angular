@@ -1,101 +1,76 @@
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
-</head>
-<div class="row">
+<div class="row formulario">
     <div class="col-sm-6">
         <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]=14>
             <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
         </agm-map>
     </div>
-    <div class="col-sm-6">
-        <div>
-            <p>
-                Nombre: {{hotel.nombre}}
-            </p>
-            <p>
-                Calificación: {{hotel.calificacionPromedio}}
-            </p>
-            <p>
-                Costo habitación: {{hotel.costoHabitacion | currency}}
-            </p>
-        </div>
+    <div class="col-sm-6 ">
+       
+       <h2>
+           {{hotel.nombre}}
+       </h2>
+Calificación : 
+       <span class="o-hotel-review__score"><em>{{hotel.calificacionPromedio}}</em>/5</span>
+
+
+       <div class="o-price">                                          
+             Precio Habitación : <span class="o-price__currency"> </span>
+        <span class="o-price__num">$ {{hotel.costoHabitacion}}</span>
+     </div>
+
+
+
+       
     </div>
 </div>
 
-<div class="centrado">
 
-    <form class="form-inline" (ngSubmit)="saveComent()">
-        <div class="form-group">
-            <label for="inputNombre">Nombre</label>
-            <input class="form-control" id="inputNombre" required="true" name="nombre" placeholder="Nombre Usuario"  [(ngModel)]="usuario">
+
+<div class="formulario">
+    <form class="form-signin" (ngSubmit)="saveComent()">
+        <h5 class="form-signin-heading">Cuentanos tu opinión</h5>
+
+
+      <div class="form-group">
+          <label for="inputNombre">Nombre</label>
+          <input class="form-control corto" id="inputNombre" required="true" name="nombre" placeholder="Nombre Usuario"
+          [(ngModel)]="usuario">
+      </div>
+
+      <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input class="form-control corto" id="inputEmail" required="true" name="email" placeholder="email@example.com"
+          [(ngModel)]="email">
+      </div>
+       <div class="form-group">
+          <label for="inputCalificacion">Calificación</label>
+          <input class="form-control corto" id="inputCalificacion" required="true" name="calificacion" placeholder="1-5"
+          [(ngModel)]="calificacion">
         </div>
 
-        <div class="form-group">
-            <label for="inputEmail">Email</label>
-            <input type="email" class="form-control" id="inputEmail" required="true" name="email" placeholder="Email" [(ngModel)]="email">
-        </div>
+      <div class="form-group ">
+          <label for="inputComentario">Comentario</label>
+          <input class="form-control grande" id="inputComentario" required="true" name="comentario" [(ngModel)]="comentario">
+      </div>
 
-        <div class="form-group">
-            <label for="inputComentario">Comentario</label>
-            <input class="form-control" id="inputComentario" required="true" name="comentario" [(ngModel)]="comentario">
-        </div>
-
-        <div class="form-group">
-            <label for="inputCalificacion">Calificación</label>
-            <input class="form-control" id="inputCalificacion" required="true" name="calificacion" placeholder="5" [(ngModel)]="calificacion">
-        </div>
-
-        <button type="submit" class="btn btn-primary">Guardar</button>
-    </form>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
 
 
 
-    <div>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-        <p>
-            {{location}}
-        </p>
-    </div>
+
+
+
+  <div class="gris">
+        <ul>
+            
+            <li *ngFor="let item of comentarios" >
+              <app-comentario-item [comentario]=item></app-comentario-item>
+
+
+            </li>
+        </ul>
+
+</div>
 </div>

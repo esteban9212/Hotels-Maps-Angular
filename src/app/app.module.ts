@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CreateHotelComponent } from './create-hotel/create-hotel.component';
 import { AgmCoreModule } from '@agm/core';
 import { TabModule } from 'angular-tabs-component';
+import { ComentarioItemComponent } from './comentario-item/comentario-item.component';
 
 
 
@@ -23,6 +24,7 @@ import { TabModule } from 'angular-tabs-component';
     HotelItemListComponent,
     HotelInfoComponent,
     CreateHotelComponent,
+    ComentarioItemComponent,
   ],
   imports: [
     BrowserModule,

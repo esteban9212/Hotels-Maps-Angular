@@ -1,0 +1,16 @@
+.izq{
+
+}
+span.o-hotel-review__score {
+    display: inline-block;
+    vertical-align: middle;
+    background: #2681FF;
+    border-radius: 14px;
+    font-family: arial, sans-serif;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #A8CCFF;
+    line-height: 1.3;
+}
+
+

@@ -1,18 +1,76 @@
-.row{
-    height: 400px;
+.gris{
+  background: #d7d7d7;
 }
-
 agm-map{
-    height: 250px;
-    width: 250px;
+
+    height: 261px;
+    width: 470px;
+    margin-top: 20px;
+
 }  
+.o-price__num {
+    color: #f60;
+    font-size: 22px;
+    line-height: 1.1;
+    font-weight: bolder;
+}
+span.o-hotel-review__score {
+    display: inline-block;
+    vertical-align: middle;
+    background: #2681FF;
+    border-radius: 14px;
+    font-family: arial, sans-serif;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #A8CCFF;
+    line-height: 1.3;
+}
+.o-price__currency {
+    color: #f60;
+    font-size: 14px;
+}
   .col-sm-6{
-      height: 500px;
+
+    margin-top: 20px;
+    margin-bottom: 25px;
       font-family: 'Oswald', sans-serif;
       font-size: 18px;
+      
   }
 
   .centrado{
       text-align: center;
   }
   
+  .col-sm-6 {
+    height: auto !important;
+}
+.row {
+    height: 269px;
+}
+.modal-content {
+    width: 752px !important;
+}
+.grande{
+      height: 69px;
+}
+.info{
+  margin-top: 10px;
+}
+
+.formulario{
+  margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.row.formulario {
+    display: contents;
+}
+
+.corto {
+    width: fit-content;
+}
+
+h2 {
+    width: max-content;
+}
