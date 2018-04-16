@@ -51,12 +51,20 @@ export class HotelInfoComponent implements OnInit {
       let size = this.hotel.comentarios.length;
       for (let i: number = 0; i < size; i++) {
 
-        let cal = this.hotel.comentarios[i].calificacion;
+        let cal = this.hotel.comentarios[i].calificacion+"";
+        let num:number= parseInt(cal);
+
         console.log(cal);
         console.log(total);
-        total += cal;
+        total += num;
       }
-      this.hotel.calificacionPromedio = total / size;
+      let totalnum=parseInt(total+"");
+      let sizenum=parseInt(size+"");
+      let promedio=totalnum / sizenum;
+let redondeado= promedio.toFixed(2);
+
+
+      this.hotel.calificacionPromedio =parseInt(redondeado+"") ;
 
       this.hotelService.updateHotel(this.hotel);
 

@@ -11,9 +11,5 @@ export class Comentario {
 		this.email=email;
 		this.comentario=comentario;
 		this.calificacion=calificacion;
-
 	}
-
-
-
 }

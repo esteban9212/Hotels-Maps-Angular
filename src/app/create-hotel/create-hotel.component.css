@@ -72,3 +72,7 @@ float:left;
     padding: 30px 15px;
 }
 
+agm-map.sebm-google-map-container {
+    width: 100%;
+}
+

@@ -13,4 +13,23 @@ span.o-hotel-review__score {
     line-height: 1.3;
 }
 
+.email{
+	    font-size: 10px;
+}
+
+.info
+{
+	    font-size: 15px;
+	        margin-bottom: 0px;
+}
+p.email {
+    margin-bottom: 0px;
+}
+
+.col-sm-4.der {
+    padding-left: 37px;
+    padding-right: 0px;
+}
+
+
 
