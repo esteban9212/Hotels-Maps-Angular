@@ -2,14 +2,33 @@
 	padding-top: 30px;
 	text-decoration: none;
 }
-app-search-hotel {
+app-create-hotel {
     text-align: center;
+
+
+}
+
+.blanco{
+  color: white;
+}
+.jumbotron.jumbotron-fluid.fondo {
+    margin-bottom: 0px;
+    height:500px;
+}
+.fondo{
+     background-image: url("https://hotelweddingblocks.com/wp-content/uploads/2012/12/arkansas-hotel-reservation-top.jpg");
+
+background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center top;
 
 }
 
 .flex {
     display: flex;
 }
+
 
 .formulario{
   border-radius: 5px;
@@ -19,7 +38,7 @@ app-search-hotel {
   padding: 1rem;
   border: 2px solid #ccc;
   text-align: center;
-  display: inline-flex;
+
   margin-top: 20px;
   margin-left: 20px;
   text-align: initial;
@@ -30,12 +49,18 @@ li {
 }
 
 
-.formulario {
-float:left;
-}
+
 
 list-hotels {
 float:left;
 
+}
+
+.tabs__panel[_ngcontent-c3] {
+    background-color: #f3f6f8 !important;
+    width: 100%;
+    box-shadow: inset 0px 0px 0px 1px #c9c9c9;
+    border-radius: 6px;
+    padding: 30px 15px;
 }
 

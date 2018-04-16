@@ -10,7 +10,7 @@ import { HotelsService } from '../services/hotels.service';
 export class CreateHotelComponent implements OnInit {
 
   hotels: Hotel[];
-
+  hotelBuscado: string = "";
   nombre: string = '';
   costoHabitacion: number;
   latitud: number = 0;
@@ -36,7 +36,35 @@ export class CreateHotelComponent implements OnInit {
     this.longitud = lon;
     //  this.locationChosen = false;
     alert('El hotel se creo exiosamente');
+  }
 
+  filter() {
+    console.log("<" + this.hotelBuscado + ">");
+    let hotelsToFilter: Hotel[];
+
+    if (this.hotelBuscado.length == 0) {
+      console.log("vacio");
+
+      this.hotelService.getHotels().subscribe((hotels) =>
+        this.hotels = hotels
+      );
+
+    } else {
+
+      let resultado = this.hotelService.filterHotels(this.hotelBuscado);
+
+      if (resultado.hoteles.length == 0) {
+        this.hotelService.getHotels().subscribe((hotels) =>
+          this.hotels = hotels
+
+        );
+        alert('no hay hoteles con ese nombre');
+      } else {
+        this.hotels = resultado.hoteles;
+      }
+
+
+    }
 
   }
 

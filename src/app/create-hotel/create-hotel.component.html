@@ -1,46 +1,85 @@
 
-<div class="flex">
   
-  <div class="formulario">
-  
-
-<form class="form-signin" (ngSubmit)="saveHotel()">
-  <h2 class="form-signin-heading">Guardar Hotel</h2>
-  <div class="form-group">
-    <label for="inputNombre">Nombre</label>
-    <input class="form-control" id="inputNombre" required="true" name="nombre" placeholder="Nombre Hotel" [(ngModel)]="nombre">
+<div class="jumbotron jumbotron-fluid fondo">
+  <div class="container">
+    <h1 class="display-3 blanco">Trivago 2.0</h1>
+    <p class="lead blanco">Encuentra el mejor hotel!!</p>
   </div>
-
-
-  <div class="form-group">
-    <label for="inputCosto">Costo Habitacion</label>
-    <input class="form-control" id="inputCosto" required="true" type="number" name="costoHabitacion" placeholder="costo habitacion $$$" [(ngModel)]="costoHabitacion">
-  </div>
-
-  <div class="form-group">
-    <label for="inputLatitud">Latitud</label>
-    <input class="form-control" id="inputLatitud" required="true" type="number" name="latitud" placeholder="latitud Hotel" [(ngModel)]="latitud">
-  </div>
-
-  <div class="form-group">
-    <label for="inputLongitud">Longitud</label>
-    <input class="form-control" id="inputLongitud" required="true" type="number" name="longitud" placeholder="longitud Hotel" [(ngModel)]="longitud">
-  </div>
-
-
-  <button type="submit" class="btn btn-primary">Guardar</button>
-</form>
-
 </div>
+  <div class="row">
+  <div class="col-lg-3">
+    <div class="affix" >
 
-<div class="list-hotels" >
-  <ul>
-    <li *ngFor="let hotel of hotels ">
-      <app-hotel-item-list [hotel]=hotel ></app-hotel-item-list>
-    </li>
-  </ul> 
-</div>
-</div>
+
+      <tabs>
+        <tab tabTitle="Guardar">
+
+
+           <form class="form-signin" (ngSubmit)="saveHotel()">
+            <h2 class="form-signin-heading">Guardar Hotel</h2>
+            <div class="form-group">
+              <label for="inputNombre">Nombre</label>
+              <input class="form-control" id="inputNombre" required="true" name="nombre" placeholder="Nombre Hotel" [(ngModel)]="nombre">
+            </div>
+
+
+            <div class="form-group">
+              <label for="inputCosto">Costo Habitacion</label>
+              <input class="form-control" id="inputCosto" required="true" type="number" name="costoHabitacion" placeholder="costo habitacion $$$" [(ngModel)]="costoHabitacion">
+            </div>
+
+            <div class="form-group">
+              <label for="inputLatitud">Latitud</label>
+              <input class="form-control" id="inputLatitud" required="true" type="number" name="latitud" placeholder="latitud Hotel" [(ngModel)]="latitud">
+            </div>
+
+            <div class="form-group">
+              <label for="inputLongitud">Longitud</label>
+              <input class="form-control" id="inputLongitud" required="true" type="number" name="longitud" placeholder="longitud Hotel" [(ngModel)]="longitud">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </form>
+      </tab>
+
+      <tab tabTitle="Buscar">
+
+          <form class="form-signin" (ngSubmit)="filter()">
+            <h2 class="form-signin-heading">Buscar Hotel</h2>
+            <div class="form-group">
+              <label for="inputNombreBuscar">Nombre</label>
+              <input class="form-control" id="inputNombreBuscar" required="true" name="nombre" placeholder="Nombre Hotel" [(ngModel)]="hotelBuscado">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Buscar</button>
+          </form>
+
+
+
+      </tab>
+      </    tabs>
+
+
+      </div>
+  </div>
+
+    <div class="col-lg-9">
+      <div class="list-hotels" >
+        <ul>
+          <li *ngFor="let hotel of hotels ">
+            <app-hotel-item-list [hotel]=hotel ></app-hotel-item-list>
+          </li>
+        </ul> 
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
 
 
 

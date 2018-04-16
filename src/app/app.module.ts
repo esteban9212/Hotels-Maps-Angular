@@ -13,6 +13,8 @@ import { HotelInfoComponent } from './hotel-info/hotel-info.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CreateHotelComponent } from './create-hotel/create-hotel.component';
 import { AgmCoreModule } from '@agm/core';
+import { TabModule } from 'angular-tabs-component';
+
 
 
 @NgModule({
@@ -20,7 +22,7 @@ import { AgmCoreModule } from '@agm/core';
     AppComponent,
     HotelItemListComponent,
     HotelInfoComponent,
-    CreateHotelComponent
+    CreateHotelComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { AgmCoreModule } from '@agm/core';
     NgbModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAaAE2ZFl8qgUC9xc4fU4OnP_d3il3_zmo'
-    })
+    }),
+    TabModule
   ],
   providers: [HotelsService],
   bootstrap: [AppComponent]
