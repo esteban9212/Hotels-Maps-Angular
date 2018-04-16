@@ -13,8 +13,9 @@ export class CreateHotelComponent implements OnInit {
   hotelBuscado: string = "";
   nombre: string = '';
   costoHabitacion: number;
-  latitud: number = 0;
-  longitud: number = 0;
+  latitude = 3.341968;
+  longitude = -76.53034;
+  ubicacionElegida = false;
 
   constructor(public hotelService: HotelsService) { }
 
@@ -26,14 +27,12 @@ export class CreateHotelComponent implements OnInit {
 
   saveHotel() {
 
-    this.hotelService.addHotel(this.nombre, this.costoHabitacion, this.latitud, this.longitud);
+    this.hotelService.addHotel(this.nombre, this.costoHabitacion, this.latitude, this.longitude);
     this.nombre = '';
     let pr: number;
     this.costoHabitacion = pr;
-    let lat: number;
-    this.latitud = lat;
-    let lon: number;
-    this.longitud = lon;
+    this.latitude = this.latitude;
+    this.longitude = this.longitude;
     //  this.locationChosen = false;
     alert('El hotel se creo exiosamente');
   }
@@ -65,6 +64,14 @@ export class CreateHotelComponent implements OnInit {
 
 
     }
+
+  }
+  onChoseLocation(event) {
+    this.latitude = event.coords.lat;
+    this.longitude = event.coords.lng;
+    this.ubicacionElegida = true;
+    console.log(event.coords.lat);
+    console.log(event.coords.lng);
 
   }
 
