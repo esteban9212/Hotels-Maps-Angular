@@ -10,7 +10,7 @@ export class Hotel {
 	comentarios:Comentario[];
 
 
-	constructor(nombre:string, calificacionPromedio:number,costoHabitacion:number,ubicacion:string,latitud:number,longitud:number,comentarios:Comentario[]) {
+	constructor(nombre:string, calificacionPromedio:number,costoHabitacion:number,latitud:number,longitud:number,comentarios:Comentario[]) {
 		this.nombre=nombre;
 		this.calificacionPromedio=calificacionPromedio;
 		this.costoHabitacion=costoHabitacion;

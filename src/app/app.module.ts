@@ -10,9 +10,9 @@ import { HotelsService } from './services/hotels.service';
 import { HotelItemListComponent } from './hotel-item-list/hotel-item-list.component';
 import { HttpModule } from '@angular/http';
 import { HotelInfoComponent } from './hotel-info/hotel-info.component';
-import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CreateHotelComponent } from './create-hotel/create-hotel.component';
-
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -30,6 +30,9 @@ import { CreateHotelComponent } from './create-hotel/create-hotel.component';
     FormsModule,
     HttpModule,
     NgbModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAaAE2ZFl8qgUC9xc4fU4OnP_d3il3_zmo'
+    })
   ],
   providers: [HotelsService],
   bootstrap: [AppComponent]

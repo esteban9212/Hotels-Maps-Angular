@@ -9,37 +9,35 @@ import { HotelsService } from '../services/hotels.service';
 })
 export class CreateHotelComponent implements OnInit {
 
-  hotels:Hotel[];
+  hotels: Hotel[];
 
-nombre: string = '';
+  nombre: string = '';
   costoHabitacion: number;
   latitud: number = 0;
   longitud: number = 0;
-  locationChosen = false;
-  botonActivo = false;
 
   constructor(public hotelService: HotelsService) { }
 
   ngOnInit() {
-       this.hotelService.getHotels().subscribe((hotels)=>
-    this.hotels=hotels
+    this.hotelService.getHotels().subscribe((hotels) =>
+      this.hotels = hotels
     );
   }
 
-  saveHotel(){
+  saveHotel() {
 
-      this.hotelService.addHotel(this.nombre, this.costoHabitacion, this.latitud, this.longitud);
-      this.nombre = '';
-      let pr: number;
-      this.costoHabitacion = pr;
-       let lat: number;
-      this.latitud = lat;
-       let lon: number;
-      this.longitud = lon;
+    this.hotelService.addHotel(this.nombre, this.costoHabitacion, this.latitud, this.longitud);
+    this.nombre = '';
+    let pr: number;
+    this.costoHabitacion = pr;
+    let lat: number;
+    this.latitud = lat;
+    let lon: number;
+    this.longitud = lon;
     //  this.locationChosen = false;
-      alert('El hotel se creo exiosamente');
+    alert('El hotel se creo exiosamente');
 
-    
+
   }
 
 }
