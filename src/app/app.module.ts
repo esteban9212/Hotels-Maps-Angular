@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
 import { AppComponent } from './app.component';
 import { HotelsService } from './services/hotels.service';
 import { HotelItemListComponent } from './hotel-item-list/hotel-item-list.component';
