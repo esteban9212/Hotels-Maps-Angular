@@ -29,9 +29,6 @@
               [(ngModel)]="costoHabitacion">
             </div>
 
-
-
-
             <div class="form-group mapa">
               <label for="inputCosto">Ubicación</label>
               <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]=14 (mapClick)="onChoseLocation($event)">
@@ -48,7 +45,7 @@
             <h2 class="form-signin-heading">Buscar Hotel</h2>
             <div class="form-group">
               <label for="inputNombreBuscar">Nombre</label>
-              <input class="form-control" id="inputNombreBuscar" required="true" name="nombre" placeholder="Nombre Hotel" [(ngModel)]="hotelBuscado">
+              <input class="form-control" id="inputNombreBuscar" required="true" name="nombre" placeholder="Nombre Hotel" [(ngModel)]="hotelBuscado" (input)="onInputChange($event.target.value)">
             </div>
 
             <button type="submit" class="btn btn-primary">Buscar</button>

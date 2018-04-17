@@ -25,6 +25,35 @@ export class CreateHotelComponent implements OnInit {
     );
   }
 
+onInputChange(hotelBuscado:string){
+  console.log("<" + this.hotelBuscado + ">");
+    let hotelsToFilter: Hotel[];
+
+    if (this.hotelBuscado.length == 0) {
+      console.log("vacio");
+
+      this.hotelService.getHotels().subscribe((hotels) =>
+        this.hotels = hotels
+      );
+
+    } else {
+
+      let resultado = this.hotelService.filterHotels(this.hotelBuscado);
+
+      if (resultado.hoteles.length == 0) {
+        this.hotelService.getHotels().subscribe((hotels) =>
+          this.hotels = hotels
+
+        );
+        alert('no hay hoteles con ese nombre');
+      } else {
+        this.hotels = resultado.hoteles;
+      }
+
+
+    }
+
+}
   saveHotel() {
 
     this.hotelService.addHotel(this.nombre, this.costoHabitacion, this.latitude, this.longitude);

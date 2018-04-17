@@ -30,7 +30,7 @@ import { ComentarioItemComponent } from './comentario-item/comentario-item.compo
     BrowserModule,
     AngularFireModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase,'Hotels-Maps-Angular'),
     FormsModule,
     HttpModule,
     NgbModule.forRoot(),

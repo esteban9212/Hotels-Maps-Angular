@@ -12,6 +12,9 @@ agm-map{
     line-height: 1.1;
     font-weight: bolder;
 }
+.o-price {
+    width: max-content;
+}
 span.o-hotel-review__score {
     display: inline-block;
     vertical-align: middle;
