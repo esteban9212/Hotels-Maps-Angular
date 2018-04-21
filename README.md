@@ -1,5 +1,10 @@
 # HotelsMaps
 
+
+
+It is a web application made in angular for the management of hotels, creation, search and management of comments and ratings by users.
+
+to see a demo of this application please go to (https://esteban9212.github.io/Hotels-Maps-Angular/)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 
